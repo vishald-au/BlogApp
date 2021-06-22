@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+$white: #fff;
+$white2: #eee;
+$dark: rgb(24, 24, 24);
+$dark2: #121212;
+$dark3: #acacac;
+
+.bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  background: $white2;
+  color: $dark;
+
+  .App {
+    background: $white;
+    width: 100%;
+    max-width: 400px;
+    height:90vh;
+    max-height: 800px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.082);
+    overflow: hidden;
+    position: relative;
+
+    .topBar {
+      padding: 20px;
+
+      svg {
+        font-size:22px;
+        color: $dark;
+      }
+    }
+
+
+    .menuBar {
+      padding:20px 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-content: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      background: $white;
+
+      .svg-box {
+        padding: 0 10px 20px;
+      }
+      .svg-box.active {
+        border-bottom: 2px solid red;
+        
+        svg {
+          color: $dark;
+        }
+      }
+      .svg-box svg {
+        font-size: 22px;
+        color: $dark3;
+      }
+      .userIcon {
+        font-size:19px !important;
+      }
+    }
+  }
+
+
+  .card {border:0;background: transparent;margin-bottom: 50px;}
+  .card-img, .card-img-top {
+    border-radius: 20px !important;
+    box-shadow: 0px 12px 12px #0000005c;
+    max-height: 500px;
+  }
+  .card-body {
+    position: absolute;
+    bottom: 15px;
+    width: 90%;
+    background: $white;
+    border-radius: 20px;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+.card-text {font-size: 12px;color:red;}
+.card-text span {margin-left:10px;color:$dark3;}
+
+
+
+}
+.pages {
+  padding: 10px 20px;
+  /* background: orange; */
+  max-height: 550px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.text-right {text-align: right;}
+.moonIcon {
+  font-size: 18px !important;
+  margin-left: 10px;
+}
+
+.dark {
+
+  background: $dark2;
+  color:$white;
+
+    .App {
+      background: $dark;
+     /*  box-shadow: 2px 2px 22px rgba(0, 0, 0, 0.2); */
+
+    .topBar {
+      background: $dark;
+    }
+    svg {
+      color: $white !important;
+    }
+ .menuBar {
+   background: $dark;
+ }
+  }
+  .card-body {
+    background: $dark;
+  }
+}

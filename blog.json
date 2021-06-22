@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Microsoft's Open-Source Pivot Is Creating a Great Place to Work",
+      "desc": "At Microsoft Build last week, Satya Nadella, Microsoft's CEO, opened with the benefits of collaboration and cooperation, how developers are now growing faster at non-tech companies than inside tech companies, how companies will need to advance, and how every person will need to begin preparing for a very different future.<br />Pretty much the entire event was about massive improvements to developer tools so that more people could become developers, and these newly-enabled devs could more aggressively build their part of this fantastic future.<br />Microsoft isn't just building for the future. The company is focusing on tools that will allow an ever-broader group of people to program for themselves. Microsoft anticipates a new PC revolution -- but instead of focusing on operational tools like word processors, spreadsheets, email, and databases, they aim to enable a new class of citizen developers that won't only be adjusting to that future -- but crafting it in real time.At the heart of this plan for the future is Microsoft's pivot to open source; and while there were several benefits highlighted for that action, an important one was left out which is that Microsoft has become a far better place to work.<br />Let's talk about some of the interesting things that came out of Microsoft Build last week, and we'll close with my product of the week, a 3D printed fake rhino horn with the same genetic fingerprint as a real one. You'll want to check this out because it is brilliant.",
+      "img": "https://i.pinimg.com/564x/30/0e/58/300e58d83dbae5ad9d0d35d9bc22b641.jpg",
+      "time": "May 31, 2021",
+      "cat": "Microsoft"
+    },
+    {
+      "id": 2,
+      "title": "Apple Needs This New Hire to Be Heroic",
+      "desc": "Stella Low, one of the most capable communications executives I've ever met, just left Cisco to lead corporate communications and support diversity and social responsibility at Apple.<br />In contrast, Apple seems to have made a list of things not to do to customers, or as an employer, and rather than avoiding bad practices has set them as goals.<br />The reason for this is an excessive focus on margins and a lack of focus on customers whom the company appears to increasingly take for granted; a common problem with Apple's lock-in business model.<br />That lock-in model was prevalent during the early years of the tech market. However, after it nearly killed IBM, it fell out of favor. Only Apple and Oracle still practice it at scale (it is inherently anti-competitive and can lead to anti-customer behavior).<br />Stella moved from EMC, which showcased the most customer-friendly offering I've ever seen with their old VCE group, to Dell, which has been aggressive in fighting misogyny and improving diversity. Cisco leads the market with its diversity and corporate responsibility efforts.<br />I point this out because, while Apple is very successful, this tendency to do bad things makes it a far more significant challenge than EMC, Dell, or Cisco for a communications manager. This is because the marketing and communications jobs in tech companies, which have no line authority, are often held accountable for the executives' image problems.<br />Let's talk about Apple this week. Then we'll close with the product of the week, my favorite laptop of the year (so far), the HP Elite Folio.",
+      "img": "https://i.pinimg.com/564x/90/80/eb/9080eb042e09c3aa8b0ae1b153069cae.jpg",
+      "time": "May 17, 2021",
+      "cat": "Apple"
+    },
+    {
+      "id": 3,
+      "title": "Bolt-On Security the Linux Way",
+      "desc": "As longtime readers know, while I try to stay knowledgeable on the many sub-disciplines of information technology, my passion is for information security. Since it's been a while since I've contributed any InfoSec knowhow, I wanted to rectify that. I couldn't have timed this realization better, because (as you'll see) the techniques on display are perfect for protecting your deluge of tax season documents.<br />In this piece, I aim to provide a range of simple but effective options for encrypting a small number of files. In particular, these options are salient for use cases like tax filing, where users are sending sensitive documents to recipients with an unknown degree of technical proficiency. Fond as I am of PGP, I'll bet you your refund check that your accountant doesn't know the first thing about using it.<br />Before going further, I'll note that all of these file encryption techniques require you to use an additional channel for transmitting shared secrets, primarily passwords. The file will be sent through one pre-agreed channel, while the means of decrypting it will be sent via another.<br />There are too many viable auxiliary channels to enumerate, but just make sure that you take reasonable steps to pick one that isn't easily compromised. The fact that you are using an additional channel is itself protection against the file's compromise: without it, sending an encrypted file and its decryption password on the same channel creates a single point of failure. Using two channels requires two successful attacks by your adversaries to fail.<br />Let's start at the lowest complexity (and security) technique and go to the highest. Some later entries are for the hardcore security types, but there's something for everyone.",
+      "img": "https://i.pinimg.com/564x/9e/3d/a5/9e3da52e722a2a8669af6f4809c0540f.jpg",
+      "time": "May 12, 2021",
+      "cat": "Security"
+    },
+    {
+      "id": 4,
+      "title": "Dell Apex Sets High Bar for As-A-Service Offerings",
+      "desc": "Last week at Dell Technologies World, the most significant announcement was a massive as-a-service offering called Dell Technologies Apex.<br />This promises to return the IT market to its long lost but fondly remembered IBM past. Back when I came out of school, IBM was the most revered and powerful technology company. This benefit was mainly due to a sales model that predated as-a-service but was surprisingly similar.<br />The services first leasing model assured IBM a steady, easy-to-manage income stream; and customers an equally manageable cost stream that assured IBM and its customers were tied together at the hip. Dell's Apex promises even better benefits for Dell and its customers.<br />Given Dell's size and status in the market, its competitors should also start driving similarly aggressive and comprehensive as-a-service moves. However, Dell's size remains unmatched, putting this offering arguably in a sustainable lead.<br />Let's talk about Apex this week. We'll then close with my product of the week, an impressive new WiFi 6E wireless mesh solution from Linksys.",
+      "img": "https://i.pinimg.com/564x/1f/38/47/1f38470f5f8d69630c42a4c07233d59c.jpg",
+      "time": "May 10, 2021",
+      "cat": "Dell"
+    },
+    {
+      "id": 5,
+      "title": "A Linux Safari to Classify the Genus of This Penguin",
+      "desc": "Recently, I took an interest in poking at Gentoo a bit. In the eyes of many desktop Linux users, it's considered a rite of passage to install this historically significant distribution. I've scaled Mt. Arch, so Gentoo Peak is next in my Linux mountaineering.<br />Before I started sinking time into it, though, I wanted to see just what I would gain from the formidable task of installing Gentoo. In other words, what does Gentoo bring to the table? A lot, it turns out, but we'll get there in time.<br />This curiosity sent me on a much more interesting Linux safari to explore what truly differentiates distributions. What follows is the classification field guide I wish I had when I began my Linux journey.<br />For instance, I've seen Manjaro characterized as a beginner distro, and I appreciate its mission to break in Arch Linux. But the fact that there's a chance Manjaro users might need to manually downgrade its rolling release packages places it beyond what I would personally recommend to beginners. On the other hand, the most competent computer user I know, a decades-long veteran in the tech sector, uses Linux Mint, which I actually do recommend to Linux neophytes.<br />Also irrelevant to our exploration are desktop environments. It's a mistake nearly every desktop Linux user makes at first, me included. It's natural to take the most visible component for the distribution itself. But with few exceptions, the desktop has little bearing on what the distro really consists of. With far more distributions than desktops, it's common for radically different distributions to have the same desktop.",
+      "img": "https://i.pinimg.com/564x/20/84/2b/20842b9449166bfa6d8558ab93a791e3.jpg",
+      "time": "Apr 12, 2021",
+      "cat": "Linux"
+    },
+    {
+      "id": 6,
+      "title": "Cisco, Microsoft and a Simulated Workplace Future",
+      "desc": "As is often the case when technology is advancing very rapidly, the leading providers of an evolving class of products are on very different pages. I'm talking about Cisco and Microsoft -- and while neither's approach is wrong, neither is complete -- and together they can build a comprehensive picture of what is needed for our hybrid workplace future.<br />This hybrid future is one where remote workers are better off than those working on-premises and where you can instantly travel to a meeting any place in the world without feeling at a disadvantage.<br />Cisco's efforts are focused on a better understanding of the remote individual's unique needs, their management, and how to create a better hybrid work environment. Microsoft's are focused on making traveling digitally indistinguishable from physically traveling.<br />I maintain that both approaches aren't in conflict but complementary to each other. It would help if we had both's tools to manage better and assure that the employees and the artificial reality provide a non-biased photorealistic remote collaboration instance.<br />Let's talk about the advantages of a simulated workplace done right, and we'll close with my product of the week, a new graphics card from AMD that people are paying almost twice the list price for because they want it so badly.",
+      "img": "https://i.pinimg.com/564x/5c/9c/89/5c9c8933304ca53cbc2a07645b4ac480.jpg",
+      "time": "Apr 5, 2021",
+      "cat": "Cisco"
+    }
+  ]
+}
