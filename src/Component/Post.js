@@ -3,15 +3,18 @@ const Post = ({ postShow }) => {
 
 
     return (
-        <div>
+        <div className='postBox'>
 
             {postShow.map(post => (
 
                 <div key={post.id}>
+                    <p className='badge bg-danger'>{post.cat}</p>
+                    <h2>
+                        {post.title}</h2>
 
-                    <h2>{post.title}</h2>
-                    <img src={post.img} alt={post.title} />
-                    <p className='card-text'>{post.cat} <span className='text-mute  text-right'>{post.time}</span></p>
+                    <p className='text-mute'><small>{post.time}</small></p>
+                    <img className='postImg' src={post.img} alt={post.title} />
+
                     <p>{post.desc}</p>
 
                 </div>

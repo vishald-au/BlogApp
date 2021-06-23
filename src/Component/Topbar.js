@@ -1,14 +1,15 @@
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { FaMoon } from 'react-icons/fa';
 import { RiSearch2Line } from 'react-icons/ri';
+import { IoIosArrowBack } from 'react-icons/io';
 
 
-const Topbar = ({ changeDark }) => {
+const Topbar = ({ changeDark, postShow }) => {
     return (
         <div className='topBar'>
             <div className='row'>
                 <div className='col-6'>
-                    <HiMenuAlt1 />
+                    {postShow ? <IoIosArrowBack /> : <HiMenuAlt1 />}
                 </div>
                 <div className='col-6 text-right'><RiSearch2Line /><FaMoon onClick={changeDark} className='moonIcon' /></div>
             </div>

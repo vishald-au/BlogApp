@@ -6,14 +6,9 @@ import User from './User';
 import Post from './Post';
 
 
-const Pages = ({ Route, Switch, blogData, NavLink }) => {
+const Pages = ({ Route, Switch, blogData, NavLink, postShow, openPost }) => {
 
-    const [postShow, setPostShow] = useState([])
 
-    const openPost = (id) => {
-        console.log(id)
-        setPostShow(blogData.filter((blog) => blog.id === id))
-    }
 
 
     return (
@@ -29,7 +24,7 @@ const Pages = ({ Route, Switch, blogData, NavLink }) => {
                     <Fav />
                 </Route>
                 <Route path="/post">
-                    <Post postShow={postShow} />
+                    <Post postShow={postShow} NavLink={NavLink} />
                 </Route>
                 <Route path="/">
                     <Home blogData={blogData} NavLink={NavLink} openPost={openPost} />

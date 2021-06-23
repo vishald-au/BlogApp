@@ -36,7 +36,12 @@ function App() {
     dark ? setDark(false) : setDark(true)
   }
 
+  const [postShow, setPostShow] = useState()
 
+  const openPost = (id) => {
+    console.log(id)
+    setPostShow(blogData.filter((blog) => blog.id === id))
+  }
 
 
 
@@ -45,8 +50,8 @@ function App() {
     <div className={'bg ' + (dark && 'dark')}>
       <div className='App'>
         <Router>
-          <Topbar changeDark={changeDark} />
-          <Pages Switch={Switch} Route={Route} blogData={blogData} NavLink={NavLink} />
+          <Topbar changeDark={changeDark} postShow={postShow} />
+          <Pages Switch={Switch} Route={Route} blogData={blogData} NavLink={NavLink} openPost={openPost} postShow={postShow} />
           <Menubar NavLink={NavLink} />
         </Router>
       </div>

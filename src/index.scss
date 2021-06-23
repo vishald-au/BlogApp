@@ -103,7 +103,27 @@ $dark3: #acacac;
   }
 .card-text {font-size: 12px;color:red;}
 .card-text span {margin-left:10px;color:$dark3;}
+.h2post {
+    display: flex;
+    align-items: center;
 
+    svg {
+      width: 50px;
+      color:$dark;
+    }
+}
+
+.postImg {
+  max-width: 120%;
+  margin-bottom: 20px;
+  transform: translate(-10%, 0);
+}
+.postBox {
+
+  p {
+    font-size: 14px;
+  }
+}
 
 
 }
@@ -155,6 +175,11 @@ $dark3: #acacac;
     background: $dark;
   }
   .card-title {color:$white}
+  .h2post {
+    svg {
+      color:$white;
+    }
+}
 }
 
 
