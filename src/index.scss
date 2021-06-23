@@ -84,7 +84,7 @@ $dark3: #acacac;
     }
   }
 
-
+.card-title {color:$dark;    white-space: normal;}
   .card {border:0;background: transparent;margin-bottom: 50px;}
   .card-img, .card-img-top {
     border-radius: 20px !important;
@@ -108,7 +108,7 @@ $dark3: #acacac;
 
 }
 .pages {
-  padding: 10px 20px;
+  padding: 20px;
   /* background: orange; */
   max-height: 550px;
   overflow-x: hidden;
@@ -118,6 +118,18 @@ $dark3: #acacac;
 .moonIcon {
   font-size: 18px !important;
   margin-left: 10px;
+}
+
+.blogs {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.blogs a{
+  display: inline-block;
+  width: 300px;
+  height: 70vh;
+  margin-right: 30px;
 }
 
 .dark {
@@ -141,5 +153,17 @@ $dark3: #acacac;
   }
   .card-body {
     background: $dark;
+  }
+  .card-title {color:$white}
+}
+
+
+@media (max-width:560px) {
+  .bg .App {
+    max-width: initial;
+    height: 100vh;
+    max-height: initial;
+    border-radius: 0;
+    box-shadow: none;
   }
 }
