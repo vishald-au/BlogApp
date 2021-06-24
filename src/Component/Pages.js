@@ -4,9 +4,10 @@ import Fav from './Fav';
 import Add from './Add';
 import User from './User';
 import Post from './Post';
+import Search from './Search';
 
 
-const Pages = ({ Route, Switch, blogData, NavLink, backOn }) => {
+const Pages = ({ Route, Switch, blogData, NavLink, backOn, searchText }) => {
 
 
 
@@ -14,6 +15,9 @@ const Pages = ({ Route, Switch, blogData, NavLink, backOn }) => {
     return (
         <div className='pages'>
             <Switch>
+                <Route path="/search">
+                    <Search backOn={backOn} blogData={blogData} searchText={searchText} />
+                </Route>
                 <Route path="/user">
                     <User />
                 </Route>

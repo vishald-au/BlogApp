@@ -48,6 +48,13 @@ function App() {
 
   const backReset = () => {
     setBackButton(false)
+    setSearchText('')
+  }
+
+  const [searchText, setSearchText] = useState('')
+
+  const assignSearch = (e) => {
+    setSearchText(e)
   }
 
 
@@ -55,8 +62,8 @@ function App() {
     <div className={'bg ' + (dark && 'dark')}>
       <div className='App'>
         <Router>
-          <Topbar changeDark={changeDark} backButton={backButton} backReset={backReset} NavLink={NavLink} />
-          <Pages Switch={Switch} Route={Route} blogData={blogData} NavLink={NavLink} backOn={backOn} />
+          <Topbar changeDark={changeDark} backButton={backButton} backReset={backReset} NavLink={NavLink} assignSearch={assignSearch} searchText={searchText} />
+          <Pages Switch={Switch} Route={Route} blogData={blogData} NavLink={NavLink} backOn={backOn} searchText={searchText} />
           <Menubar NavLink={NavLink} backReset={backReset} />
         </Router>
       </div>

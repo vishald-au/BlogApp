@@ -24,6 +24,7 @@ a {
 
 $white: #fff;
 $white2: #eee;
+$white3: rgb(235, 235, 235);
 $dark: rgb(24, 24, 24);
 $dark2: #121212;
 $dark3: #acacac;
@@ -181,7 +182,7 @@ $dark3: #acacac;
 }
 .text-right {text-align: right;}
 .moonIcon {
-  font-size: 18px !important;
+  font-size: 16px !important;
   margin-left: 10px;
 }
 
@@ -197,7 +198,36 @@ $dark3: #acacac;
   margin: 0 20px;
 }
 
+.positionchange {
+  position: relative;
+}
+.searchInput {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    border: 0;
+    padding: 6px 55px 0 60px;
+    font-size: 13px;
+    height: 60px;
+    transform: translate(-12px, -20px);
+    width: 405px;
+    border-radius: 4px;
+    transition: all .3s ease;
+    color:$dark;
+    background: $white;
+    
 
+    &:focus {
+      outline: none;
+      background: $white3;
+ 
+    }
+}
+
+.zindex {
+  position: relative;
+  z-index: 2;
+}
 .dark {
 
   background: $dark2;
@@ -233,6 +263,17 @@ $dark3: #acacac;
     }
   }
 
+  .searchInput {
+    color:$white;
+    background: $dark;
+  
+    &:focus {
+      outline: none;
+      background: $dark2;
+      
+ 
+    }
+}
 
 }
 
