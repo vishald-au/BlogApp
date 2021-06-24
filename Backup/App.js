@@ -40,10 +40,10 @@ function App() {
   const [postInfo, setPostInfo] = useState('');
   const [backButton, setBackButton] = useState(false);
 
-  const backOn = () => {
+  const openPost = (id) => {
     setBackButton(true)
     /*   setPostShow(blogData.filter((blog) => blog.id === id)); */
-    /*  setPostInfo(id) */
+    setPostInfo(id)
   }
 
   const backReset = () => {
@@ -56,7 +56,7 @@ function App() {
       <div className='App'>
         <Router>
           <Topbar changeDark={changeDark} backButton={backButton} backReset={backReset} NavLink={NavLink} />
-          <Pages Switch={Switch} Route={Route} blogData={blogData} NavLink={NavLink} backOn={backOn} />
+          <Pages Switch={Switch} Route={Route} blogData={blogData} NavLink={NavLink} openPost={openPost} postInfo={postInfo} />
           <Menubar NavLink={NavLink} backReset={backReset} />
         </Router>
       </div>

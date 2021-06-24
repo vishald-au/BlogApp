@@ -6,7 +6,7 @@ import User from './User';
 import Post from './Post';
 
 
-const Pages = ({ Route, Switch, blogData, NavLink, backOn }) => {
+const Pages = ({ Route, Switch, blogData, NavLink, openPost, postInfo }) => {
 
 
 
@@ -23,11 +23,11 @@ const Pages = ({ Route, Switch, blogData, NavLink, backOn }) => {
                 <Route path="/fav">
                     <Fav />
                 </Route>
-                <Route path="/post/:handle">
-                    <Post NavLink={NavLink} backOn={backOn} />
+                <Route path="/post">
+                    <Post NavLink={NavLink} postInfo={postInfo} />
                 </Route>
                 <Route path="/">
-                    <Home blogData={blogData} NavLink={NavLink} />
+                    <Home blogData={blogData} NavLink={NavLink} openPost={openPost} />
                 </Route>
             </Switch>
         </div>

@@ -1,17 +1,34 @@
 
 
-const Home = ({ blogData, NavLink, openPost }) => {
+const Home = ({ blogData, NavLink }) => {
 
 
     return (
         <div className='main'>
+
+            <div className='newStuff'>
+
+                {blogData.filter(blog => blog.id === 5).map(filteredBlog => (
+                    <NavLink key={filteredBlog.id} to={'/post/' + filteredBlog.id}>
+                        <div className='newStuffData'>
+                            <div><img className='fImg' src={filteredBlog.img} /></div>
+                            <div>
+                                <h5>{filteredBlog.title}</h5>
+                                <small className='card-text'>{filteredBlog.cat} <span className='text-mute text-right'>{filteredBlog.time}</span></small>
+                            </div>
+                        </div>
+                    </NavLink>
+                ))}
+
+            </div>
+
             <div className='content blogs'>
 
 
                 {blogData.map(blog => (
-                    <NavLink key={blog.id} to={'/post/' + blog.id} onClick={() => openPost(blog.id)}>
-                        < div className='card' >
-                            < img src={blog.img} className='card-img-top' alt={blog.title} />
+                    <NavLink key={blog.id} to={'/post/' + blog.id}>
+                        <div className='card' >
+                            <img src={blog.img} className='card-img-top' alt={blog.title} />
 
 
                             <div className='card-body'>

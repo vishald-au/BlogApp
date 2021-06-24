@@ -1,15 +1,13 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 
 
-const Post = ({ backOn }) => {
+const Post = ({ postInfo }) => {
 
     const [showData, setShowData] = useState('')
-    const { handle } = useParams()
 
     const getPost = () => {
-        axios.get('/posts/' + handle).then(
+        axios.get('/posts/' + postInfo).then(
             (res) => {
                 console.log(res.data);
                 setShowData(res.data);
@@ -19,7 +17,6 @@ const Post = ({ backOn }) => {
 
     useEffect(() => {
         getPost();
-        backOn();
     }, []);
 
 
