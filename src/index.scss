@@ -170,7 +170,9 @@ $dark3: #acacac;
     font-size: 14px;
   }
 }
-
+.searchArea {
+  padding: 20px 0;
+}
 
 }
 .pages {
@@ -228,6 +230,23 @@ $dark3: #acacac;
   position: relative;
   z-index: 2;
 }
+
+.list-group-item  {
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+}
+
+.fImg {
+  border-radius: 5px !important;
+  object-fit: none;
+  object-position: 50% 50%;
+  max-height: 60px;
+  width: 60px;
+  margin-right: 10px;
+}
+
 .dark {
 
   background: $dark2;
@@ -273,6 +292,12 @@ $dark3: #acacac;
       
  
     }
+}
+
+.list-group-item {
+  background: $dark;
+  color:$white;
+  border-color:#3b3b3b;
 }
 
 }

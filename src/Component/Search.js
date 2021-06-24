@@ -23,11 +23,23 @@ const Search = ({ backOn, blogData, searchText }) => {
     return (
         <div className='searchArea'>
 
+            <ul className='list-group list-group-flush'>
+                {filterBlog(blogData).map(sblog => (
+                    <li className='list-group-item' key={sblog.id}>
+
+                        <div><img className='fImg' src={sblog.img} /></div>
+                        <div>
+                            {sblog.title}
+                            <br />
+                            <small className='card-text'>{sblog.cat} </small>
+                            <small className='text-mute'>{sblog.time}</small>
+                        </div>
+
+                    </li>
+                ))}
+            </ul>
 
 
-            <div>{filterBlog(blogData).map(sblog => (
-                <li key={sblog.id}> {sblog.title} </li>
-            ))}</div>
         </div>
     )
 }
