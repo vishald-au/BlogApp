@@ -1,7 +1,7 @@
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { FaMoon } from 'react-icons/fa';
 import { IoIosArrowBack } from 'react-icons/io';
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 
 const Topbar = ({ changeDark, backButton, backReset, NavLink, assignSearch, searchText }) => {
 

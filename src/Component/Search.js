@@ -7,7 +7,7 @@ const Search = ({ backOn, blogData, searchText, NavLink }) => {
 
     useEffect(() => {
         backOn();
-    }, []);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 
 

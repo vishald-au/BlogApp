@@ -20,7 +20,7 @@ const Post = ({ backOn }) => {
     useEffect(() => {
         getPost();
         backOn();
-    }, []);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 
     return (
