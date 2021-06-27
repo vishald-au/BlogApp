@@ -36,8 +36,6 @@ function App() {
     dark ? setDark(false) : setDark(true)
   }
 
-  const [postShow, setPostShow] = useState();
-  const [postInfo, setPostInfo] = useState('');
   const [backButton, setBackButton] = useState(false);
 
   const backOn = () => {
@@ -51,11 +49,13 @@ function App() {
     setSearchText('')
   }
 
-  const [searchText, setSearchText] = useState('')
+  const [searchText, setSearchText] = useState()
 
   const assignSearch = (e) => {
     setSearchText(e)
   }
+
+
 
 
   return (
@@ -63,7 +63,7 @@ function App() {
       <div className='App'>
         <Router>
           <Topbar changeDark={changeDark} backButton={backButton} backReset={backReset} NavLink={NavLink} assignSearch={assignSearch} searchText={searchText} />
-          <Pages Switch={Switch} Route={Route} blogData={blogData} NavLink={NavLink} backOn={backOn} searchText={searchText} />
+          <Pages Switch={Switch} Route={Route} blogData={blogData} NavLink={NavLink} backOn={backOn} searchText={searchText} showBlogs={showBlogs} />
           <Menubar NavLink={NavLink} backReset={backReset} />
         </Router>
       </div>

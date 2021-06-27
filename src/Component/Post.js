@@ -27,12 +27,13 @@ const Post = ({ backOn }) => {
         <div className='postBox'>
 
             <div key={showData.id}>
+                <img className='postImg' src={showData.img} alt={showData.title} />
                 <p className='badge bg-danger'>{showData.cat}</p>
                 <h2>
                     {showData.title}</h2>
 
                 <p className='text-mute'><small>{showData.time}</small></p>
-                <img className='postImg' src={showData.img} alt={showData.title} />
+
 
                 <p>{showData.desc}</p>
 

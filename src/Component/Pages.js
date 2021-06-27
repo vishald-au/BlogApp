@@ -7,7 +7,7 @@ import Post from './Post';
 import Search from './Search';
 
 
-const Pages = ({ Route, Switch, blogData, NavLink, backOn, searchText }) => {
+const Pages = ({ Route, Switch, blogData, NavLink, backOn, searchText, showBlogs }) => {
 
 
 
@@ -16,13 +16,13 @@ const Pages = ({ Route, Switch, blogData, NavLink, backOn, searchText }) => {
         <div className='pages'>
             <Switch>
                 <Route path="/search">
-                    <Search backOn={backOn} blogData={blogData} searchText={searchText} />
+                    <Search backOn={backOn} blogData={blogData} searchText={searchText} NavLink={NavLink} />
                 </Route>
                 <Route path="/user">
-                    <User />
+                    <User blogData={blogData} showBlogs={showBlogs} />
                 </Route>
                 <Route path="/add">
-                    <Add />
+                    <Add showBlogs={showBlogs} />
                 </Route>
                 <Route path="/fav">
                     <Fav />

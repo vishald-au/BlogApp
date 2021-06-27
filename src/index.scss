@@ -7,6 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar {
+  width: 0;               /* width of the entire scrollbar */
+}
+
+:focus {
+  outline: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -28,6 +36,7 @@ $white3: rgb(235, 235, 235);
 $dark: rgb(24, 24, 24);
 $dark2: #121212;
 $dark3: #acacac;
+$dark4: #aaaaaa;
 
 .bg {
   display: flex;
@@ -54,6 +63,8 @@ $dark3: #acacac;
 
     .topBar {
       padding: 20px;
+      position: absolute;
+      width: 100%;
 
       svg {
         font-size:22px;
@@ -73,7 +84,7 @@ $dark3: #acacac;
       position: absolute;
       width: 100%;
       bottom: 0;
-      background: $white;
+     // background: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.3) 100%);
 
       .svg-box {
         padding: 0 10px 20px;
@@ -87,11 +98,56 @@ $dark3: #acacac;
       }
       .svg-box svg {
         font-size: 22px;
-        color: $dark3;
+        color: $dark;
       }
       .userIcon {
         font-size:19px !important;
       }
+    }
+  }
+
+  .profilePage {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+  }
+
+  .delBtn {
+    background: red;
+    border: 0;
+    color: $white;
+    width: 60px;
+    height: 60px;
+    font-size: 20px !important;
+
+
+    &:hover {
+      background:rgb(228, 0, 0);
+      border: 0;
+      color: white;
+    }
+  }
+  .noExtra {
+    margin: 0;
+    padding: 0;
+  }
+
+  .table {
+    font-size: 13px;
+    color:$dark;
+  }
+
+
+  .gButton {
+    background: $dark !important;
+    color: $white !important;
+
+    div {
+      background: $dark !important;
     }
   }
 
@@ -127,11 +183,10 @@ $dark3: #acacac;
 .card-title {color:$dark;    white-space: normal;}
   .card {border:0;background: transparent;margin-bottom: 50px;}
   .card-img, .card-img-top {
-    border-radius: 15px !important;
-//    box-shadow: 0px 12px 12px #0000005c;
+    border-radius: 15px !important; 
     object-fit: none;
     object-position: 50% 50%;
-    max-height: 360px;
+    max-height: 55vh;
     width: 100%;
   }
   .card-body {
@@ -161,11 +216,11 @@ $dark3: #acacac;
   transform: translate(-10%, 0);
   object-fit: none;
   object-position: 50% 50%;
-  max-height: 200px;
+  max-height: 300px;
   width: 120%;
 }
 .postBox {
-  padding: 20px;
+  padding: 0 20px;
   p {
     font-size: 14px;
   }
@@ -176,11 +231,10 @@ $dark3: #acacac;
 
 }
 .pages {
-  padding: 0;
-  /* background: orange; */
-  max-height: 550px;
+  padding: 65px 0;
   overflow-x: hidden;
   overflow-y: auto;
+  height: 100%;
 }
 .text-right {text-align: right;}
 .moonIcon {
@@ -216,13 +270,12 @@ $dark3: #acacac;
     border-radius: 4px;
     transition: all .3s ease;
     color:$dark;
-    background: $white;
+    background: transparent;
     
 
     &:focus {
       outline: none;
       background: $white3;
- 
     }
 }
 
@@ -231,11 +284,22 @@ $dark3: #acacac;
   z-index: 2;
 }
 
+.list-group a:first-child {border-top: 0;}
+.list-group a:last-child {border-bottom: 0;}
+
+
 .list-group-item  {
   font-size: 14px;
   padding-left: 20px;
   padding-right: 20px;
   display: flex;
+  border-left: 0;
+  border-right: 0;
+  box-shadow: 0 8px 12px rgba(0, 0, 0,.1);
+  margin: 0 auto 10px;
+  border: 0;
+  width: 90%;
+  border-radius: 8px !important;
 }
 
 .fImg {
@@ -245,6 +309,53 @@ $dark3: #acacac;
   max-height: 60px;
   width: 60px;
   margin-right: 10px;
+}
+
+.commonInput {
+  width: 100%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  padding: 15px 25px;
+  font-size:14px;
+  background: transparent;
+  color: $dark;
+  text-align: left;
+  margin: 0;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid orange !important;
+  }
+}
+.commonInput.textArea {
+  min-height: 150px;
+}
+
+.buttonUpload {
+  margin-top: -7px;
+}
+.saveButton {
+}
+
+.moveTop {
+  position: absolute;
+  top:0;
+}
+
+.flexBoard {
+ 
+}
+
+.proImg {
+  max-width: 30px;
+  border-radius: 50%;
+}
+
+.smallText {
+  font-size: 12px;
+  color: #585858;
 }
 
 .dark {
@@ -257,13 +368,13 @@ $dark3: #acacac;
      /*  box-shadow: 2px 2px 22px rgba(0, 0, 0, 0.2); */
 
         .topBar {
-          background: $dark;
+          
         }
         svg {
           color: $white !important;
         }
       .menuBar {
-        background: $dark;
+         
       }
   }
   .card-body {
@@ -282,23 +393,43 @@ $dark3: #acacac;
     }
   }
 
-  .searchInput {
-    color:$white;
-    background: $dark;
-  
-    &:focus {
-      outline: none;
-      background: $dark2;
+        .searchInput {
+          color:$white;
+        
+          &:focus {
+            outline: none;
+            background: $dark;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            
       
- 
-    }
-}
+          }
+      }
 
-.list-group-item {
-  background: $dark;
-  color:$white;
-  border-color:#3b3b3b;
-}
+      .list-group-item {
+        background: $dark;
+        color:$white;
+        border-color:#3b3b3b;
+      }
+
+      .commonInput {
+        border-bottom: 1px solid $dark3;
+        color: $white;
+      }
+
+      .gButton {
+        background: $white !important;
+        color: $dark !important;
+    
+        div {
+          background: $white !important;
+        }
+      }
+      .table {
+        color:$white;
+        border-color: rgb(59, 59, 59);
+      }
+      .delBtn { 
+      }
 
 }
 
