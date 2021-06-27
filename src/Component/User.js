@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const User = ({ blogData, showBlogs }) => {
 
-    const googleClientId = '463076630886-v2jl6fq6l7hdrvnhp962o88vs66s499s.apps.googleusercontent.com'
+    const googleClientId = '425457352579-6lqp0okmoq6mjsleo2559vrjqdfggp37.apps.googleusercontent.com'
 
     const [userName, setUserName] = useState('')
     const [userEmail, setUserEmail] = useState('')
@@ -55,7 +55,7 @@ const User = ({ blogData, showBlogs }) => {
                 isSignedIn='true'
             /> : <>
                     <div className='moveTop'>
-                        <small className='smallText'>You are logged in as<img className='proImg m-1' src={userImg} alt={userEmail} />{userName} - <button className='logBtn' onClick={handleLogout}>logout</button></small>
+                        <small className='smallText'>You are logged in as<img className='proImg m-1' src={userImg} alt={userEmail} />{userName} <button className='logBtn' onClick={handleLogout}>logout</button></small>
                     </div>
                     <div>
                         <table class="table">
