@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import { AiOutlineCloudUpload } from 'react-icons/ai';
 import axios from 'axios';
 
 const Add = ({ showBlogs }) => {
@@ -14,7 +13,6 @@ const Add = ({ showBlogs }) => {
     const [cat, setCat] = useState()
     const [desc, setDesc] = useState()
     const [img, setImg] = useState()
-    const [time, setTime] = useState(new Date().toLocaleDateString())
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -23,7 +21,7 @@ const Add = ({ showBlogs }) => {
             desc: desc,
             cat: cat,
             img: img,
-            time: time
+            time: new Date().toLocaleDateString()
         }
         setTitle('')
         setCat('')
