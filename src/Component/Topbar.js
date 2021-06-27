@@ -1,16 +1,11 @@
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { FaMoon } from 'react-icons/fa';
-import { RiSearch2Line } from 'react-icons/ri';
 import { IoIosArrowBack } from 'react-icons/io';
 import { useState, useRef } from 'react';
 
 const Topbar = ({ changeDark, backButton, backReset, NavLink, assignSearch, searchText }) => {
 
     const searchInput = useRef()
-
-    const [showInput, setShowInput] = useState(false)
-
-
 
     return (
         <div className='topBar'>

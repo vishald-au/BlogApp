@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 const Search = ({ backOn, blogData, searchText, NavLink }) => {
 
@@ -33,7 +33,7 @@ const Search = ({ backOn, blogData, searchText, NavLink }) => {
                 {filterBlog(blogData).map(sblog => (
                     <NavLink key={sblog.id} to={'/post/' + sblog.id}>
                         <li className='list-group-item' key={sblog.id}>
-                            <div><img className='fImg' src={sblog.img} /></div>
+                            <div><img className='fImg' src={sblog.img} alt={sblog.title} /></div>
                             <div>
                                 {sblog.title}
                                 <br />

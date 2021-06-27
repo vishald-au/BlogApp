@@ -11,7 +11,7 @@ const Home = ({ blogData, NavLink }) => {
                 {blogData.filter(blog => blog.id === 5).map(filteredBlog => (
                     <NavLink key={filteredBlog.id} to={'/post/' + filteredBlog.id}>
                         <div className='newStuffData'>
-                            <div><img className='fImg' src={filteredBlog.img} /></div>
+                            <div><img className='fImg' src={filteredBlog.img} alt={filteredBlog.title} /></div>
                             <div>
                                 <h5>{filteredBlog.title}</h5>
                                 <small className='card-text'>{filteredBlog.cat} <span className='text-mute text-right'>{filteredBlog.time}</span></small>

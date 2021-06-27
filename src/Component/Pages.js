@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Home from './Home';
 import Fav from './Fav';
 import Add from './Add';
