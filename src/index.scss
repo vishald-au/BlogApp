@@ -44,9 +44,9 @@ $dark4: #aaaaaa;
 
 .bg {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  align-content: center;
+  align-content: flex-start;
   flex-wrap: nowrap;
   flex-direction: row;
   width: 100vw;
@@ -466,7 +466,7 @@ $dark4: #aaaaaa;
 @media (max-width:560px) {
   .bg .App {
     max-width: initial;
-    height: 100vh;
+    height: 85vh;
     max-height: initial;
     border-radius: 0;
     box-shadow: none;
