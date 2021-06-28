@@ -27,15 +27,15 @@ const Post = ({ backOn }) => {
         <div className='postBox'>
 
             <div key={showData.id}>
-                <img className='postImg' src={showData.img} alt={showData.title} />
-                <p className='badge bg-danger'>{showData.cat}</p>
+                <img className='postImg' src='https://i.pinimg.com/564x/9d/e3/27/9de327905d868d42708c8fc13de6168c.jpg' alt={showData.title} />
+                {/*    <p className='badge bg-danger'>{showData.cat}</p> */}
                 <h2>
                     {showData.title}</h2>
 
-                <p className='text-mute'><small>{showData.time}</small></p>
+                {/*  <p className='text-mute'><small>{showData.time}</small></p> */}
 
 
-                <p>{showData.desc}</p>
+                <p>{showData.body}</p>
 
             </div>
 

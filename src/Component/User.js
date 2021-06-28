@@ -45,32 +45,31 @@ const User = ({ blogData, showBlogs }) => {
 
     return (
         <div className='profilePage'>
-            {!loginSuccess ? <GoogleLogin
+            {loginSuccess === false ? <div class='buttonCenter'><GoogleLogin
                 clientId={googleClientId}
                 buttonText="Login with Google"
                 onSuccess={responseGoogle}
                 onFailure={errorGoogle}
                 cookiePolicy={'single_host_origin'}
                 className='gButton'
-                isSignedIn='true'
-            /> : <>
+            /></div> : <>
                     <div className='moveTop'>
                         <small className='smallText'>You are logged in as<img className='proImg m-1' src={userImg} alt={userEmail} />{userName} <button className='logBtn' onClick={handleLogout}>logout</button></small>
                     </div>
-                    <div>
-                        <table class="table">
 
-                            <tbody>
-                                {blogData.map(blog => (
-                                    <tr key={blog.id}>
-                                        <th scope="row">{blog.id}</th>
-                                        <td>{blog.title}</td>
-                                        <td className='noExtra'><button className='delBtn' onClick={() => handleDel(blog.id)}><RiDeleteBin7Line /></button></td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                    <table class="table">
+
+                        <tbody>
+                            {blogData.map(blog => (
+                                <tr key={blog.id}>
+                                    <th scope="row">{blog.id}</th>
+                                    <td>{blog.title}</td>
+                                    <td className='noExtra'><button className='delBtn' onClick={() => handleDel(blog.id)}><RiDeleteBin7Line /></button></td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+
 
                 </>
 

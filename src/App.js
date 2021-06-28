@@ -13,7 +13,7 @@ import axios from 'axios';
 
 function App() {
 
-  axios.defaults.baseURL = 'http://localhost:5000/'
+  axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com/'
 
   const [blogData, setBlogData] = useState([])
 
@@ -30,7 +30,7 @@ function App() {
     showBlogs();
   }, []);
 
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
 
   const changeDark = () => {
     dark ? setDark(false) : setDark(true)

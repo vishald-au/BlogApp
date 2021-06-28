@@ -14,10 +14,8 @@ const Search = ({ backOn, blogData, searchText, NavLink }) => {
     function filterBlog() {
         return blogData.filter(
             (blog) =>
-                blog.title.toString().toLowerCase().includes(searchText) ||
-                blog.cat.toString().toLowerCase().includes(searchText) ||
-                blog.time.includes(searchText) ||
-                blog.desc.toString().toLowerCase().includes(searchText)
+                blog.title.toString().toLowerCase().includes(searchText) /* ||
+                blog.body.toString().toLowerCase().includes(searchText) */
         )
     }
 
@@ -33,12 +31,12 @@ const Search = ({ backOn, blogData, searchText, NavLink }) => {
                 {filterBlog(blogData).map(sblog => (
                     <NavLink key={sblog.id} to={'/post/' + sblog.id}>
                         <li className='list-group-item' key={sblog.id}>
-                            <div><img className='fImg' src={sblog.img} alt={sblog.title} /></div>
+                            <div><img className='fImg' src='https://i.pinimg.com/564x/1f/38/47/1f38470f5f8d69630c42a4c07233d59c.jpg' alt={sblog.title} /></div>
                             <div>
                                 {sblog.title}
-                                <br />
+                                {/*         <br />
                                 <small className='card-text'>{sblog.cat} </small>
-                                <small className='text-mute'>{sblog.time}</small>
+                                <small className='text-mute'>{sblog.time}</small> */}
                             </div>
                         </li>
                     </NavLink>

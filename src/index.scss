@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:first-letter {
+  text-transform: uppercase;
+}
+
 ::-webkit-scrollbar {
   width: 0;               /* width of the entire scrollbar */
 }
@@ -111,9 +115,11 @@ $dark4: #aaaaaa;
     width: 100%;
     height: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
     position: relative;
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 
   .delBtn {
@@ -139,6 +145,7 @@ $dark4: #aaaaaa;
   .table {
     font-size: 13px;
     color:$dark;
+    margin-top: 60px;
   }
 
 
@@ -368,6 +375,17 @@ $dark4: #aaaaaa;
   color: #585858;
 }
 
+.buttonCenter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .dark {
 
   background: $dark2;
@@ -437,6 +455,7 @@ $dark4: #aaaaaa;
       .table {
         color:$white;
         border-color: rgb(59, 59, 59);
+       
       }
       .delBtn { 
       }
